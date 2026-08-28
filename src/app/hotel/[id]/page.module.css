@@ -1,0 +1,60 @@
+.page { background: #0A0A0A; min-height: 100vh; }
+.back {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 400;
+  text-transform: uppercase; letter-spacing: 0.14em;
+  color: #888888; text-decoration: none; margin-bottom: 40px;
+  transition: color 0.2s ease;
+}
+.back:hover { color: #C9A84C; }
+.top {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
+}
+.imageWrap {
+  width: 100%; height: 400px; overflow: hidden; background: #111111;
+}
+.image { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.info { padding-top: 8px; }
+.label {
+  font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.18em; color: #C9A84C;
+  margin-bottom: 12px;
+}
+.hotelName {
+  font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 400;
+  color: #F5F5F5; line-height: 1.1; margin-bottom: 8px; letter-spacing: -0.01em;
+}
+.address {
+  font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 300;
+  color: #888888; margin-bottom: 24px; letter-spacing: 0.02em;
+}
+.divider { height: 1px; background: #222222; margin: 24px 0; }
+.description {
+  font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 300;
+  color: #AAAAAA; line-height: 1.8; margin-bottom: 24px; letter-spacing: 0.02em;
+}
+.amenitiesTitle {
+  font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.18em; color: #C9A84C;
+  margin-bottom: 16px;
+}
+.amenities { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.amenity {
+  padding: 8px 16px; background: #111111; border: 1px solid #222222;
+  font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 400;
+  color: #888888; letter-spacing: 0.04em;
+}
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.notFound { text-align: center; padding-top: 120px; }
+.notFoundTitle {
+  font-family: 'Cormorant Garamond', serif; font-size: 48px;
+  color: #F5F5F5; margin-bottom: 16px;
+}
+.notFoundSub { color: #888888; margin-bottom: 32px; }
+@media (max-width: 768px) {
+  .top { grid-template-columns: 1fr; gap: 32px; }
+  .imageWrap { height: 260px; }
+  .hotelName { font-size: 32px; }
+  .btns { flex-direction: column; }
+  .btns a { width: 100%; }
+}

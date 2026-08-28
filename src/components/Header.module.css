@@ -1,0 +1,100 @@
+.header {
+  position: fixed; top: 0; left: 0; right: 0;
+  background-color: #0A0A0A;
+  border-bottom: 1px solid #222222;
+  z-index: 1000; height: 70px;
+}
+.inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 100%;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 68px;
+  overflow: hidden;
+  position: relative;
+}
+.logoImg {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.6);
+  object-fit: contain;
+  /* Black logo → Gold */
+  filter: invert(72%) sepia(40%) saturate(500%) hue-rotate(5deg) brightness(92%) contrast(90%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+.logo:hover .logoImg {
+  filter: invert(78%) sepia(50%) saturate(600%) hue-rotate(5deg) brightness(95%) contrast(90%);
+  transform: translate(-50%, -50%) scale(0.65);
+}
+.nav { display: flex; align-items: center; gap: 28px; }
+.navLink {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px; font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.14em; color: #888888;
+  position: relative;
+  transition: color 0.25s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.navLink::after {
+  content: ''; position: absolute; left: 0; bottom: -4px;
+  width: 0; height: 1px; background: #C9A84C;
+  transition: width 0.25s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.navLink:hover { color: #F5F5F5; }
+.navLink:hover::after { width: 100%; }
+.ctaBtn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 10px 24px; border: 1px solid #C9A84C;
+  color: #C9A84C; font-family: 'DM Sans', sans-serif;
+  font-size: 11px; font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.14em; background: transparent;
+  transition: all 0.3s cubic-bezier(0.25,0.46,0.45,0.94);
+  cursor: pointer; text-decoration: none;
+}
+.ctaBtn:hover { background: #C9A84C; color: #0A0A0A; }
+.hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  cursor: pointer; background: none; border: none; padding: 4px;
+}
+.hamburger span {
+  width: 24px; height: 1px; background: #F5F5F5;
+  transition: all 0.3s ease;
+}
+.overlay {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: #0A0A0A; z-index: 9999;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 28px;
+}
+.overlayClose {
+  position: absolute; top: 24px; right: 24px;
+  font-size: 28px; color: #F5F5F5;
+  background: none; border: none; cursor: pointer;
+}
+.overlayLogo {
+  height: 72px; width: auto; object-fit: contain;
+  filter: invert(72%) sepia(40%) saturate(500%) hue-rotate(5deg) brightness(92%) contrast(90%);
+  margin-bottom: 24px;
+}
+.overlayLink {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px; font-weight: 400;
+  color: #F5F5F5;
+  transition: color 0.2s ease;
+  letter-spacing: 0.02em;
+}
+.overlayLink:hover { color: #C9A84C; }
+@media (max-width: 768px) {
+  .nav { display: none; }
+  .ctaBtn { display: none; }
+  .hamburger { display: flex; }
+}
