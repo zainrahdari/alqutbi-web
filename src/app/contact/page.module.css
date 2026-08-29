@@ -1,0 +1,57 @@
+.page {
+  background: #0A0A0A;
+  padding-top: 70px;
+}
+.header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.left { display: flex; flex-direction: column; gap: 32px; }
+.intro {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #888888;
+  line-height: 1.8;
+}
+.details { display: flex; flex-direction: column; gap: 24px; }
+.infoBlock { display: flex; flex-direction: column; gap: 6px; }
+.infoLabel {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #C9A84C;
+}
+.infoValue {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #F5F5F5;
+  text-decoration: none;
+  transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.infoValue:hover { color: #C9A84C; }
+.infoGold {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: #C9A84C;
+  text-decoration: none;
+  transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.infoGold:hover { color: #E2C06A; }
+.infoMuted {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #888888;
+}
+@media (max-width: 768px) {
+  .split { grid-template-columns: 1fr; gap: 48px; }
+}

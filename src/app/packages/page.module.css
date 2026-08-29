@@ -1,0 +1,36 @@
+.page { background: #0A0A0A; padding-top: 70px; }
+.header { text-align: center; margin-bottom: 48px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #0A0A0A;
+}
+.card {
+  background: #111111;
+  border-top: 2px solid #C9A84C;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+.card .btn-primary { width: 100%; margin-top: auto; }
+.cardName {
+  font-family: 'Cormorant Garamond', serif; font-size: 28px;
+  font-weight: 400; color: #C9A84C; margin-bottom: 8px;
+}
+.cardMeta {
+  font-family: 'DM Sans', sans-serif; font-size: 14px;
+  color: #888888; margin-bottom: 24px;
+}
+.inclusions { margin-bottom: 24px; }
+.inclusion {
+  font-family: 'DM Sans', sans-serif; font-size: 14px;
+  color: #888888; padding: 4px 0;
+}
+.price {
+  font-family: 'DM Sans', sans-serif; font-size: 13px;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  color: #C9A84C; margin-bottom: 24px;
+}
+@media (max-width: 1024px) { .grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
